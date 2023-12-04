@@ -135,7 +135,7 @@ type AllowedParams = {
  */
 class DeliveryType extends GenericAggregateComponent {
   constructor(content: AllowedParams) {
-    super(content, ParamsMap, 'cac:Delivery');
+    super(content, ParamsMap, 'cac:DeliveryType');
   }
 }
 
