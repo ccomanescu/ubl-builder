@@ -25,6 +25,7 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
   /** 5.  cbc:Floor [0..1]    An identifiable floor of a building. */
   /** 6.  cbc:Room [0..1]    An identifiable room, suite, or apartment of a building. */
   /** 7.  cbc:StreetName [0..1]    The name of the street, road, avenue, way, etc. to which the number of the building is attached. */
+  streetName: { order: 7, attributeName: 'cbc:StreetName', min: 0, max: 1, classRef: UdtText },
   /** 8.  cbc:AdditionalStreetName [0..1]    An additional street name used to further clarify the address. */
   /** 9.  cbc:BlockName [0..1]    The name of the block (an area surrounded by streets and usually containing several buildings) in which this address is located. */
   /** 10  cbc:BuildingName [0..1]    The name of a building. */
@@ -38,6 +39,7 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
   /** 18  cbc:CityName [0..1]    The name of a city, town, or village. */
   cityName: { order: 18, attributeName: 'cbc:CityName', min: 0, max: 1, classRef: UdtName },
   /** 19  cbc:PostalZone [0..1]    The postal identifier for this address according to the relevant national postal service, such as a ZIP code or Post Code. */
+  postalZone: { order: 19, attributeName: 'cbc:PostalZone', min: 0, max: 1, classRef: UdtText },
   /** 20  cbc:CountrySubentity [0..1]    The political or administrative division of a country in which this address is located, such as the name of its county, province, or state, expressed as text. */
   countrySubentity: { order: 20, attributeName: 'cbc:CountrySubentity', min: 0, max: 1, classRef: UdtText },
   /** 21  cbc:CountrySubentityCode [0..1]    The political or administrative division of a country in which this address is located, such as a county, province, or state, expressed as a code (typically nationally agreed). */
@@ -55,8 +57,12 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
 type AllowedParams = {
   /** An identifier for this address within an agreed scheme of address identifiers */
   id?: string | UdtIdentifier;
+  /* The main address line in an address. Example value: Main Street 1 */
+  streetName?: string | UdtText;
   /** The name of a city, town, or village */
   cityName?: string | UdtName;
+  /* The identifier for an addressable group of properties according to the relevant postal service. Example value: W1G 8LZ */
+  postalZone?: string | UdtText;
   /** The political or administrative division of a country in which this address is located, such as the name of its county, province, or state, expressed as text */
   countrySubentity?: string | UdtText;
   /** The political or administrative division of a country in which this address is located, such as a county, province, or state, expressed as a code (typically nationally agreed) */

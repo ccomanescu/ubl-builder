@@ -39,15 +39,15 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
 };
 
 type AllowedParams = {
-  id: string | UdtIdentifier;
-  description: string | UdtText;
-  conditions: string | UdtText;
-  countrySubentity: string | UdtText;
-  countrySubentityCode: string | UdtCode;
-  locationTypeCode: string | UdtCode;
-  informationURI: string | UdtIdentifier;
-  name: string | UdtName;
-  validityPeriod: string | ValidityPeriod;
+  id?: string | UdtIdentifier;
+  description?: string | UdtText;
+  conditions?: string | UdtText;
+  countrySubentity?: string | UdtText;
+  countrySubentityCode?: string | UdtCode;
+  locationTypeCode?: string | UdtCode;
+  informationURI?: string | UdtIdentifier;
+  name?: string | UdtName;
+  validityPeriod?: string | ValidityPeriod;
   address: string | Address;
 };
 
