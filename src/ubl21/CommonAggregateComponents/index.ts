@@ -127,6 +127,7 @@ import { Price, PriceParams } from './PriceTypeGroup';
 import { InvoiceLine, InvoiceLineParams } from './InvoiceLineTypeGroup';
 import { CreditNoteLine, SubCreditNoteLine, CreditNoteLineParams } from './CreditNoteLineTypeGroup';
 import { DebitNoteLine, DebitNoteLineParams } from './DebitNoteLineTypeGroup';
+import { PayeeFinancialAccount, PayeeFinancialAccountParams } from './PayeeFinancialAccount'
 
 export {
   OrderReference,
@@ -148,6 +149,8 @@ export {
   PartyIdentificationParams,
   PartyName,
   PartyNameParams,
+  PayeeFinancialAccount,
+  PayeeFinancialAccountParams,
   Language,
   LanguageParams,
   BillingReference,
