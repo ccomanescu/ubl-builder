@@ -1140,7 +1140,7 @@ export default class Invoice {
    * @param pretty Pretty format
    * @param headless result without headers
    */
-  getXml(pretty = false, headless = false): string {
+  getXml(pretty = false, headless = false, standalone = false): string {
     Object.keys(INVOICE_CHILDREN_MAP)
       .filter((attKey) => this.children[attKey])
       .forEach((attKey) => {
@@ -1157,6 +1157,6 @@ export default class Invoice {
           : this.children[attKey].parseToJson();
       });
 
-    return builder.create(this.xmlRef, { encoding: 'UTF-8', standalone: false, headless }).end({ pretty });
+    return builder.create(this.xmlRef, { encoding: 'UTF-8', standalone, headless }).end({ pretty });
   }
 }
