@@ -129,10 +129,13 @@ import { CreditNoteLine, SubCreditNoteLine, CreditNoteLineParams } from './Credi
 import { DebitNoteLine, DebitNoteLineParams } from './DebitNoteLineTypeGroup';
 import { PayeeFinancialAccount, PayeeFinancialAccountParams } from './PayeeFinancialAccount'
 import { CommodityClassification, CommodityClassificationParams } from './CommodityClassification';
+import { SellersItemIdentification, SellersItemIdentificationParams } from './SellersItemIdentification';
 
 export {
   CommodityClassification,
   CommodityClassificationParams,
+  SellersItemIdentification,
+  SellersItemIdentificationParams,
   OrderReference,
   OrderReferenceParams,
   DocumentReference,
