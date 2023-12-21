@@ -1,5 +1,5 @@
 import GenericAggregateComponent from './GenericAggregateComponent';
-import { UdtAmount } from '../types/UnqualifiedDataTypes/UdtAmount';
+import { UdtCode } from '../types/UnqualifiedDataTypes';
 /*
 
   1  cbc:ItemClassificationCode [0..1]
@@ -7,11 +7,11 @@ import { UdtAmount } from '../types/UnqualifiedDataTypes/UdtAmount';
 */
 
 const ParamsMap = {
-  itemClassificationCode: { order: 1, attributeName: 'cbc:ItemClassificationCode', min: 0, max: 1, classRef: UdtAmount },
+  itemClassificationCode: { order: 1, attributeName: 'cbc:ItemClassificationCode', min: 0, max: 1, classRef: UdtCode },
 };
 
 type AllowedParams = {
-  itemClassificationCode: string | UdtAmount;
+  itemClassificationCode: string | UdtCode;
 };
 
 /**
