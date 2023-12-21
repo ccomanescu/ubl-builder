@@ -130,8 +130,11 @@ import { DebitNoteLine, DebitNoteLineParams } from './DebitNoteLineTypeGroup';
 import { PayeeFinancialAccount, PayeeFinancialAccountParams } from './PayeeFinancialAccount'
 import { CommodityClassification, CommodityClassificationParams } from './CommodityClassification';
 import { SellersItemIdentification, SellersItemIdentificationParams } from './SellersItemIdentification';
+import { FinancialInstitutionBranch, FinancialInstitutionBranchParams } from './FinancialInstitutionBranch'
 
 export {
+  FinancialInstitutionBranch,
+  FinancialInstitutionBranchParams,
   CommodityClassification,
   CommodityClassificationParams,
   SellersItemIdentification,
