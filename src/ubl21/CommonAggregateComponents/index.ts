@@ -128,8 +128,11 @@ import { InvoiceLine, InvoiceLineParams } from './InvoiceLineTypeGroup';
 import { CreditNoteLine, SubCreditNoteLine, CreditNoteLineParams } from './CreditNoteLineTypeGroup';
 import { DebitNoteLine, DebitNoteLineParams } from './DebitNoteLineTypeGroup';
 import { PayeeFinancialAccount, PayeeFinancialAccountParams } from './PayeeFinancialAccount'
+import { CommodityClassification, CommodityClassificationParams } from './CommodityClassification';
 
 export {
+  CommodityClassification,
+  CommodityClassificationParams,
   OrderReference,
   OrderReferenceParams,
   DocumentReference,
