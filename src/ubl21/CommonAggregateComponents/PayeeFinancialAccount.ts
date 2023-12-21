@@ -16,6 +16,7 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
 
 type AllowedParams = {
   id: string | UdtIdentifier;
+  name: string | UdtText;
   financialInstitutionBranch?: FinancialInstitutionBranch;
 };
 
